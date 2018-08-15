@@ -1,0 +1,13 @@
+<div class="container" ng-controller = "coursesController">
+  <div class="row" ng-repeat = "courseChunks in courseList | chunkBy: 3">
+    <div class="col-4 pt-5" ng-repeat = "course in courseChunks">
+      <div class="lead p-2">
+        {{course.courseName}}
+      </div>
+      <div class=" p-2 ">
+        {{course.description}}
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

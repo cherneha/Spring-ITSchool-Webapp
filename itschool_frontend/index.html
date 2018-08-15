@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Young Developer</title>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <script src="config/env.js"></script>
+    <script src="src/index.js"></script>
+  </head>
+  <body ng-app = "courses">
+
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+
+    <div class="navbar-brand">
+      <div class="d-flex flex-row">
+        <div class="p-2">
+          <a class="navbar-brand" href="#">
+              <img src="res/coding.png" alt="">
+          </a>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="p-1">YoungDeveloper -</div>
+          <div class="p-1">розвиваючий ІТ-простір</div>
+      </div>
+    </div>
+    </div>
+
+
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#!/">ІТ-простір <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/courses">Курси</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/rules">Пам'ятка студентам</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/contacts">Контакти</a>
+        </li>
+
+      </ul>
+      <div class="right-side" ng-show = "!authenticated">
+        <a class="nav-link btn btn-outline-dark" href="#!/login">Вхід</a>
+      </div>
+      <div class="right-side" ng-show = "authenticated">
+        <a class="nav-link btn btn-outline-dark" href="#!/login">Вийти</a>
+      </div>
+      <div class="right-side" ng-show = "authenticated">
+        <a class="nav-link btn btn-outline-dark" href="#!/mypage">Моя сторінка</a>
+      </div>
+    </div>
+</nav>
+
+<div ng-view>
+
+</div>
+
+  <!-- <div class="container" ng-controller = "coursesController">
+    <div class="row" ng-repeat = "courseChunks in courseList | chunkBy: 3">
+      <div class="col-4 pt-5" ng-repeat = "course in courseChunks">
+        <div class="lead p-2">
+          {{course.courseName}}
+        </div>
+        <div class=" p-2 ">
+          {{course.description}}
+        </div>
+      </div>
+    </div>
+    <br>
+  </div> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
